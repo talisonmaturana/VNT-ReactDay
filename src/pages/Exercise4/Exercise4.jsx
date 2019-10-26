@@ -1,8 +1,9 @@
-import React from "react";
+import React, { Fragment } from "react";
 import { Link } from "react-router-dom";
 import DescriptionExercise from "../DescriptionExercise";
-import prototypeClimao from "../../assets/prototypes/climao.png";
+import Infos from "./Infos/Infos";
 import classes from "./Excercise4.module.scss";
+import SearchBar from './Header/SearchBar'
 
 const prototypeUrl =
     "//xd.adobe.com/spec/9ebd698b-429e-4369-51b6-da668ae21fd2-e88c";
@@ -43,12 +44,10 @@ const instructions = [
 export default function Exercise4() {
     return (
         <>
-            <DescriptionExercise instructions={instructions} />
-            <img
-                alt="Protótipo"
-                src={prototypeClimao}
-                className={classes.PrototypeImage}
-            />
+            <SearchBar/>
+            <div className={classes.Exercise4}>
+            
+            </div>
         </>
     );
 }
