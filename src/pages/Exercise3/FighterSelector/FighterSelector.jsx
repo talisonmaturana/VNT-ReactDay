@@ -11,17 +11,20 @@ function FighterSelector() {
         setFighter(fighter);
     }
 
-    useEffect(() => {
+    useEffect(() => {  
         setTimeout(() => {
             setFighterSelectionHistory([
                 ...fighterSelectionHistory,
                 {
                     fighter,
-                    time: (new Date()).toLocaleTimeString()
-                }
+                    time: (new Date()).toLocaleTimeString(),
+                },
             ]);
         }, 1000);
-    }, [fighter])
+        
+    }, [fighter, fighterSelectionHistory])
+
+    
 
     return (
         <div className={styles.FighterSelector}>
@@ -34,7 +37,7 @@ function FighterSelector() {
             <div className={styles.HistoryLog}>
                 <span>History:</span>
                 <div>
-                    {fighterSelectionHistory.map(({ fighter, time }) => (
+                    {fighterSelectionHistory.map(({fighter, time}) => (
                         <p key={fighter+time}>{`[${time}] ${fighter} was selected.`}</p>
                     ))}
                 </div>

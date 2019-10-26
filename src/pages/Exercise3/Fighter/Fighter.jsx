@@ -12,12 +12,9 @@ const images = {
 };
 
 class Fighter extends Component {
-    state = {
-        fighter: this.props.fighter
-    };
 
     render() {
-        const { fighter } = this.state;
+        const { fighter } = this.props;
         return (
             <div
                 style={{
@@ -30,6 +27,7 @@ class Fighter extends Component {
                     width: "14rem"
             }} />
         );
+        
     }
 }
 

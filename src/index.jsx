@@ -14,7 +14,7 @@ const store = createAppStore(history);
 
 const app = (
     <Provider store={store}>
-        <ConnectedRouter history={history}>
+        <ConnectedRouter key={Math.random()} history={history}>
             <AppLayout />
         </ConnectedRouter>
     </Provider>

@@ -176,7 +176,7 @@ function App() {
                     <h1>Próximas tarefas:</h1>
                     <ul>
                         {Object.keys(nextActivities).map(category => (
-                            <li>
+                            <li key={Math.random()}>
                                 <strong>{category}</strong>:{" "}
                                 {nextActivities[category]}
                             </li>
